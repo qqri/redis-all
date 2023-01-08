@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,6 +25,8 @@ public class ExternalService {
 
     }
 
+
+    @Cacheable(cacheNames =  "userAgeCache" , key = "#userId")
     public int getUserAge(String userId) {
         //외부서비스나 db 호출
         try {
