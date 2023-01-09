@@ -1,2 +1,4 @@
-# fast-campus-redis
-fastcampus redis
+# redis-all
+demo - data type
+
+pub and sub - chatting room
